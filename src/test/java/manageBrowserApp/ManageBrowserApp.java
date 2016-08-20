@@ -22,22 +22,22 @@ public class ManageBrowserApp {
 		{
 			driver = new FirefoxDriver();			
 		}
-		if(browserName.toLowerCase().contains("chrome"))
+		else if(browserName.toLowerCase().contains("chrome"))
 		{
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\BrowsersDriver\\chromedriver_win32\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
-		if(browserName.toLowerCase().contains("ie"))
+		else if(browserName.toLowerCase().contains("ie"))
 		{
 			System.setProperty("webdriver.ie.driver",System.getProperty("user.dir")+"\\BrowsersDriver\\IEDriverServer_Win32_2.53.1\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		}
-		if(browserName.toLowerCase().contains("edge"))
+		else if(browserName.toLowerCase().contains("edge"))
 		{
 			System.setProperty("webdriver.edge.driver",System.getProperty("user.dir")+"\\BrowsersDriver\\MicrosoftWebDriver.exe");
 			driver = new EdgeDriver();
 		}
-		if(browserName.toLowerCase().contains("safari"))
+		else if(browserName.toLowerCase().contains("safari"))
 		{
 			driver = new SafariDriver();
 		}
