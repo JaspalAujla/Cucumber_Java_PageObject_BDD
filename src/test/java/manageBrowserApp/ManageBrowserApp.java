@@ -55,7 +55,7 @@ public class ManageBrowserApp {
 	
 	public void setPageLoadTimeout(int waitTime)
 	{
-		driver.manage().timeouts().implicitlyWait(waitTime, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(waitTime, TimeUnit.SECONDS);
 	}
 	
 	public void launchApp(String appURL)
